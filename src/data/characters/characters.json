@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "junjun",
+    "name": "Junjun",
+    "role": "Young customer",
+    "image": "/images/characters/junjun.webp",
+    "alt": "Guide illustration of a young customer outside a sari-sari store",
+    "summary": "A young visitor whose ordinary trip to the counter becomes one of the story's most emotionally important threads.",
+    "about": "Junjun comes to the store for a small purchase, keeping the early shift rooted in everyday neighborhood life. His visit is easy to miss at first, which makes the later change in tone hit harder.",
+    "storyRole": "This guide reads Junjun as central to the tragedy suggested near the ending. The game lets players connect details through dialogue rather than spelling out every part of his story."
+  },
+  {
+    "slug": "mare",
+    "name": "Mare",
+    "role": "Neighborhood regular",
+    "image": "/images/characters/mare.webp",
+    "alt": "Guide illustration of a neighborhood regular sharing gossip at a store window",
+    "summary": "A familiar regular whose gossip makes the store feel social before the same conversations begin to feel unsettling.",
+    "about": "Mare represents the neighborhood conversation at the heart of Narinig Mo Ba. She arrives as someone familiar, speaks with the ease of a regular customer, and helps turn the counter into a place where private events become public rumor.",
+    "storyRole": "This guide reads Mare as central to the final shift in tone. Her closing appearance is one of the game's sharpest breaks from the warmth of an ordinary store visit."
+  },
+  {
+    "slug": "axel",
+    "name": "Axel",
+    "role": "Young customer",
+    "image": "/images/characters/axel.webp",
+    "alt": "Guide illustration of a child counting coins at a neighborhood store",
+    "summary": "A younger customer remembered for bringing pocket change to the counter for a small purchase.",
+    "about": "Axel is one of the children who visits the store. His small exchange of coins and goods makes the shop feel like a real community space rather than a puzzle room.",
+    "storyRole": "Axel's scene contributes texture and contrast. Not every customer delivers a major revelation; ordinary visits make the later horror more effective by establishing what a normal evening should feel like."
+  },
+  {
+    "slug": "layla",
+    "name": "Layla",
+    "role": "Customer",
+    "image": "/images/characters/layla.webp",
+    "alt": "Guide illustration of a reserved customer holding a paper-wrapped purchase",
+    "summary": "A customer whose practical request adds another everyday voice to the neighborhood's shared story.",
+    "about": "Layla is another customer at the store. Her practical request shows how naturally personal necessities sit beside snacks and coffee in a sari-sari store.",
+    "storyRole": "Like the other regular visitors, Layla helps create the familiar baseline that the game later disrupts."
+  }
+]

@@ -1,0 +1,28 @@
+.intro { padding-block: 34px 28px; border-bottom: 1px solid rgba(255,210,122,0.16); background: linear-gradient(105deg, rgba(7,22,29,0.97), rgba(7,22,29,0.9)), url("/images/home/story-lane.webp") center / cover; }
+.introInner { display: grid; gap: 7px; }
+.intro h2 { margin: 0; font-size: clamp(1.9rem, 3.2vw, 3.2rem); }
+
+.guideList { padding-block: 34px 84px; background: linear-gradient(180deg, #07161d, #091d25); }
+.guideGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.guideCard { min-width: 0; overflow: hidden; border-top: 2px solid rgba(255,210,122,0.58); background: rgba(8,28,36,0.78); box-shadow: 0 14px 28px rgba(0,0,0,0.13); }
+.guideImage { position: relative; display: block; aspect-ratio: 1.1 / 1; overflow: hidden; background: #07151b; }
+.guideImage img { object-fit: cover; transition: transform 260ms ease; }
+.guideImage::after { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(4,13,18,0.74), transparent 54%); content: ""; }
+.guideImage b { position: absolute; z-index: 1; top: 13px; left: 14px; color: rgba(255,238,204,0.88); font-family: var(--font-display), Georgia, serif; font-size: 1.18rem; letter-spacing: 0.08em; }
+.guideImage span { position: absolute; z-index: 1; right: 16px; bottom: 14px; display: inline-flex; align-items: center; gap: 7px; color: #ffe5b4; font-size: 0.78rem; font-weight: 800; }
+.guideCard:hover .guideImage img { transform: scale(1.035); }
+.guideCopy { padding: 22px 24px 23px; }
+.guideCopy h2 { max-width: 23ch; margin-bottom: 13px; font-size: clamp(1.5rem, 2.1vw, 2.15rem); line-height: 1.05; }
+.guideCopy h2 a:hover { color: var(--primary-soft); }
+.guideCopy > p:not(.eyebrow) { max-width: 62ch; margin-bottom: 0; color: rgba(245,234,214,0.78); font-size: 0.98rem; line-height: 1.58; }
+.guideFooter { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 21px; padding-top: 15px; border-top: 1px solid rgba(255,210,122,0.21); }
+.guideFooter > span { color: rgba(245,234,214,0.55); font-size: 0.68rem; letter-spacing: 0.07em; text-transform: uppercase; }
+
+.noteSection { padding-block: 58px; border-top: 1px solid rgba(255,210,122,0.18); background: linear-gradient(105deg, rgba(76,25,24,0.96), rgba(7,24,32,0.96)), url("/images/home/store-interior.webp") center / cover; }
+.noteInner { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 28px; }
+.noteInner > svg { color: var(--primary-soft); }
+.noteInner h2 { margin-bottom: 6px; }
+.noteInner p:not(.eyebrow) { max-width: 680px; margin: 0; color: rgba(245,234,214,0.8); }
+
+@media (max-width: 1024px) { .guideGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .guideImage { aspect-ratio: 1.25 / 1; } }
+@media (max-width: 768px) { .intro { padding-block: 30px 24px; } .guideList { padding-block: 25px 60px; } .guideGrid { grid-template-columns: 1fr; gap: 16px; } .guideImage { aspect-ratio: 1.5 / 1; } .guideCopy { padding: 20px; } .guideCopy h2 { font-size: 1.8rem; } .guideFooter { align-items: flex-start; flex-direction: column; } .noteSection { padding-block: 50px; } .noteInner { grid-template-columns: 1fr; gap: 16px; } .noteInner > svg { display: none; } .noteInner .button { width: 100%; justify-content: center; } }

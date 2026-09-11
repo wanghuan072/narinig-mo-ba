@@ -1,0 +1,64 @@
+.player { position: relative; width: 100%; }
+.shell {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(255,210,122,0.48);
+  border-radius: 4px 4px 0 0;
+  background: #03090d;
+  box-shadow: 0 22px 60px rgba(0,0,0,0.43), 0 0 0 7px rgba(9,20,25,0.76);
+}
+.cover { object-fit: cover; filter: blur(9px) saturate(0.78) brightness(0.72); transform: scale(1.045); transition: transform 350ms ease; }
+.scrim { position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(7,20,27,0.1), rgba(5,12,16,0.54)); }
+.iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #03090d; }
+.feedback { position: absolute; z-index: 1; inset: 0; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 24px; color: #fff7e8; font-family: var(--font-display), Georgia, serif; font-size: clamp(1.1rem, 2.2vw, 1.55rem); font-weight: 800; text-align: center; text-shadow: 0 2px 16px rgba(0,0,0,0.8); }
+.loadingIndicator { width: 24px; height: 24px; flex: 0 0 auto; border: 2px solid rgba(255,247,232,0.34); border-top-color: var(--primary-soft); border-radius: 50%; animation: game-load 750ms linear infinite; }
+.retryButton { min-height: 44px; padding: 0.55rem 0.9rem; border: 1px solid rgba(255,210,122,0.55); border-radius: 4px; background: rgba(104,34,29,0.92); color: #fff7e8; cursor: pointer; font: inherit; font-size: 0.95rem; font-weight: 800; text-shadow: none; transition: background 160ms ease, transform 160ms ease; }
+.retryButton:hover { background: #8e302a; transform: translateY(-1px); }
+.retryButton:active { transform: translateY(0); }
+.launch {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.launch:focus-visible { outline: 3px solid var(--primary-soft); outline-offset: -6px; }
+.launch:hover .launchPanel { transform: translateY(-2px); }
+.launch:active .launchPanel { transform: translateY(0) scale(0.98); }
+.launchPanel { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 12px; transition: transform 160ms ease; }
+.launchArtwork { position: relative; display: block; width: clamp(66px, 7.6vw, 102px); aspect-ratio: 1; overflow: hidden; border: 1px solid rgba(255,228,176,0.56); border-radius: 8px; box-shadow: 0 8px 18px rgba(0,0,0,0.35); }
+.launchArtwork img { object-fit: cover; }
+.playNow { color: #fff7e8; font-family: var(--font-display), Georgia, serif; font-size: clamp(1.25rem, 2.4vw, 2rem); font-weight: 800; line-height: 1; text-shadow: 0 2px 16px rgba(0,0,0,0.8); }
+.statusBar { display: flex; min-height: 48px; align-items: center; justify-content: space-between; gap: 14px; padding: 0 8px 0 16px; border: 1px solid rgba(255,210,122,0.42); border-top: 0; border-radius: 0 0 4px 4px; background: #07151c; box-shadow: 0 12px 24px rgba(0,0,0,0.18); }
+.gameName { color: rgba(245,234,214,0.9); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.04em; }
+.statusActions { display: flex; align-items: center; gap: 3px; }
+.iconButton { display: grid; width: 44px; height: 44px; border: 0; border-radius: 3px; background: transparent; color: rgba(245,234,214,0.78); cursor: pointer; place-items: center; transition: background 160ms ease, color 160ms ease; }
+.iconButton:hover, .iconButton[aria-pressed="true"] { background: rgba(255,210,122,0.12); color: var(--primary-soft); }
+.iconButton:focus-visible { outline: 2px solid var(--primary-soft); outline-offset: 2px; }
+.theater { position: fixed; z-index: 1000; inset: 0; display: grid; width: 100vw; height: 100dvh; grid-template-rows: minmax(0, 1fr) auto; background: #02080b; }
+.theater .shell, .player:fullscreen .shell { height: 100%; aspect-ratio: auto; border: 0; border-radius: 0; box-shadow: none; }
+.theater .statusBar, .player:fullscreen .statusBar { position: relative; min-height: 54px; border: 0; border-top: 1px solid rgba(255,210,122,0.3); border-radius: 0; box-shadow: none; }
+.player:fullscreen { display: grid; width: 100vw; height: 100vh; grid-template-rows: minmax(0, 1fr) auto; background: #02080b; }
+
+@keyframes game-load { to { transform: rotate(360deg); } }
+
+@media (max-width: 768px) {
+  .launchPanel { gap: 10px; padding: 9px; }
+  .playNow { font-size: 1.25rem; }
+  .statusBar { min-height: 46px; padding-left: 12px; }
+  .iconButton { width: 44px; height: 44px; }
+  .feedback { flex-direction: column; font-size: 1.15rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loadingIndicator { animation: none; }
+}

@@ -1,0 +1,26 @@
+.header { padding-block: 54px 42px; border-bottom: 1px solid var(--line); background: linear-gradient(110deg, rgba(7, 28, 36, 0.97), rgba(5, 17, 23, 0.82)), url("/images/home/story-lane.webp") center / cover; }
+.headerInner { display: grid; gap: 13px; }
+.header h1 { max-width: none; margin: 0; font-size: clamp(2rem, 4vw, 3.5rem); }
+.header p:not(.eyebrow) { max-width: 720px; margin: 0; color: var(--muted); font-size: 1.05rem; }
+.article { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 54px; padding-block: 48px 72px; }
+.localNav { align-self: start; display: grid; gap: 4px; position: sticky; top: 96px; padding: 12px; border: 1px solid var(--line); background: rgba(7, 28, 36, 0.48); }
+.localNav a { padding: 8px 10px; color: var(--muted); font-size: 0.9rem; }
+.localNav a:hover { color: var(--primary-soft); background: rgba(232, 176, 72, 0.08); }
+.copy { display: grid; gap: 32px; }
+.copy section { padding-bottom: 31px; border-bottom: 1px solid var(--line); }
+.copy h2 { margin: 0 0 10px; font-size: clamp(1.35rem, 2vw, 1.8rem); }
+.copy p { max-width: 800px; margin: 0; color: var(--muted); line-height: 1.75; }
+.email { color: var(--text) !important; }
+.email a { color: var(--primary-soft); text-decoration: underline; }
+
+@media (max-width: 1024px) {
+  .article { grid-template-columns: 190px minmax(0, 1fr); gap: 32px; }
+}
+
+@media (max-width: 768px) {
+  .header { padding-block: 40px 32px; }
+  .article { grid-template-columns: 1fr; gap: 26px; padding-block: 32px 52px; }
+  .localNav { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .copy { gap: 25px; }
+  .copy section { padding-bottom: 24px; }
+}

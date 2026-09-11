@@ -1,0 +1,173 @@
+:root {
+  --bg: #07141b;
+  --surface: #0c1d25;
+  --surface-raised: #112730;
+  --text: #f5ead6;
+  --muted: #bdbaaF;
+  --primary: #e9ae3b;
+  --primary-soft: #ffd27a;
+  --danger: #8e302a;
+  --paper: #e7d6b5;
+  --ink: #221d18;
+  --line: rgba(239, 181, 87, 0.28);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--bg);
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(233, 174, 59, 0.05), transparent 28rem),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, p { margin-top: 0; }
+
+h1, h2, h3, h4 {
+  color: var(--text);
+  font-family: var(--font-display), Georgia, serif;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+h1 { font-size: clamp(3.2rem, 7vw, 6.6rem); letter-spacing: -0.045em; }
+h2 { font-size: clamp(2.15rem, 4.2vw, 3.8rem); letter-spacing: -0.035em; }
+h3 { font-size: 1.25rem; }
+
+p { color: var(--muted); }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-underline-offset: 0.2em;
+}
+
+a:hover { color: var(--primary-soft); }
+
+button, a { touch-action: manipulation; }
+button { font: inherit; }
+
+img { display: block; max-width: 100%; }
+
+::selection { background: var(--primary); color: var(--ink); }
+
+.container {
+  width: min(1400px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: 8px;
+  left: 8px;
+  transform: translateY(-160%);
+  padding: 10px 16px;
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.skip-link:focus { transform: translateY(0); }
+
+:focus-visible {
+  outline: 3px solid var(--primary-soft);
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  color: var(--primary-soft);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.eyebrow-dark { color: var(--danger); }
+.lead { color: var(--text); font-size: 1.18rem; line-height: 1.65; }
+
+.button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.72rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.button:hover { transform: translateY(-2px); }
+.button:active { transform: translateY(0); }
+
+.button-primary {
+  border-color: rgba(255, 210, 122, 0.42);
+  background: linear-gradient(180deg, #a83a31, #78241f);
+  box-shadow: 0 8px 28px rgba(70, 12, 9, 0.3), inset 0 1px rgba(255,255,255,0.12);
+  color: #fff8ea;
+}
+
+.button-primary:hover { background: linear-gradient(180deg, #bd463a, #8e2924); color: #fff; }
+
+.text-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-soft);
+  font-weight: 700;
+}
+
+.text-link:hover svg { transform: translateX(4px); }
+.text-link svg { transition: transform 180ms ease; }
+
+.tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag-list span {
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(233, 174, 59, 0.06);
+  color: var(--text);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 1024px) {
+  .container { width: min(100% - 32px, 1400px); }
+}
+
+@media (max-width: 768px) {
+  html { scroll-padding-top: 76px; }
+  body { font-size: 16px; }
+  .container { width: min(100% - 32px, 1400px); }
+  h1 { font-size: clamp(2.8rem, 15vw, 4.5rem); }
+  h2 { font-size: clamp(2rem, 10vw, 3rem); }
+  .button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

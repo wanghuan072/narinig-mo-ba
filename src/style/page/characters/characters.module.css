@@ -1,0 +1,95 @@
+.introSection { padding-block: 64px; border-bottom: 1px solid rgba(255,255,255,0.07); background: #07161d; }
+.introGrid { display: grid; grid-template-columns: 0.72fr 1.28fr; gap: 80px; }
+.introGrid h2 { margin: 0; }
+.introGrid > div:last-child > p:first-child { max-width: 74ch; }
+.artNotice { display: flex; align-items: center; gap: 9px; margin-bottom: 0; color: var(--primary-soft); font-size: 0.82rem; }
+
+.cardsSection { padding-block: 88px 100px; background: linear-gradient(180deg, var(--bg), #091b23); }
+.characterGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; gap: 18px; }
+.characterCard { overflow: hidden; border: 1px solid rgba(255,210,122,0.25); border-radius: 4px; background: var(--surface); transition: transform 200ms ease, border-color 200ms ease; }
+.characterCard:hover { border-color: rgba(255,210,122,0.62); transform: translateY(-4px); }
+.imageWrap { position: relative; overflow: hidden; aspect-ratio: 4 / 4.5; background: #061219; }
+.imageWrap::after { position: absolute; inset: auto 0 0; height: 40%; background: linear-gradient(transparent, var(--surface)); content: ""; }
+.imageWrap img { object-fit: cover; object-position: center 24%; transition: transform 250ms ease; }
+.characterCard:hover .imageWrap img { transform: scale(1.02); }
+.imageWrap > span { position: absolute; z-index: 2; top: 14px; left: 14px; display: grid; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 50%; background: rgba(5,17,23,0.77); color: var(--primary-soft); font-family: var(--font-display), Georgia, serif; font-weight: 800; place-items: center; }
+.cardBody { padding: 6px 22px 24px; }
+.cardBody > p:first-child { margin-bottom: 4px; color: var(--primary-soft); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; }
+.cardBody h2 { margin-bottom: 11px; font-size: 2rem; }
+.summary { min-height: 92px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.09); color: var(--text); font-size: 0.96rem; }
+.cardBody h3 { margin: 21px 0 8px; color: var(--primary-soft); font-family: var(--font-body), Arial, sans-serif; font-size: 0.76rem; letter-spacing: 0.13em; text-transform: uppercase; }
+.cardBody > p:not(:first-child):not(.summary) { font-size: 0.9rem; line-height: 1.55; }
+.storyRole { margin-top: 18px; padding: 15px; border-left: 3px solid var(--danger); background: rgba(142,48,42,0.12); }
+.storyRole span { color: var(--primary-soft); font-size: 0.69rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.storyRole p { margin: 6px 0 0; font-size: 0.86rem; line-height: 1.5; }
+.storekeeperCard { grid-column: 2 / span 2; margin-top: 12px; }
+.storekeeperCard .imageWrap { aspect-ratio: 16 / 8.7; }
+
+.relationshipSection { padding-block: 96px; background: var(--paper); color: var(--ink); }
+.relationshipSection h2 { color: var(--ink); }
+.headingRow { display: flex; align-items: end; justify-content: space-between; gap: 60px; margin-bottom: 42px; }
+.headingRow h2 { margin-bottom: 0; }
+.headingRow > p { max-width: 570px; margin-bottom: 5px; color: #55493b; }
+.relationshipMap { max-width: 1000px; margin: 0 auto; }
+.centerNode { display: flex; width: 250px; min-height: 90px; margin: 0 auto; align-items: center; justify-content: center; gap: 12px; border: 2px solid var(--danger); background: rgba(255,250,239,0.44); color: var(--danger); flex-wrap: wrap; }
+.centerNode strong { color: var(--ink); font-family: var(--font-display), Georgia, serif; font-size: 1.18rem; }
+.centerNode span { width: 100%; margin-top: -10px; color: #655648; font-size: 0.76rem; text-align: center; }
+.connection { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); height: 62px; margin-inline: 11%; }
+.connection::before { position: absolute; top: 30px; right: 0; left: 0; height: 1px; background: rgba(126,48,42,0.4); content: ""; }
+.connection::after { position: absolute; top: 0; left: 50%; width: 1px; height: 31px; background: rgba(126,48,42,0.4); content: ""; }
+.connection span { position: relative; }
+.connection span::after { position: absolute; top: 30px; left: 50%; width: 1px; height: 32px; background: rgba(126,48,42,0.4); content: ""; }
+.nodes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.nodes > div { display: grid; min-height: 84px; padding: 14px; border: 1px solid rgba(34,29,24,0.22); background: rgba(255,250,239,0.32); text-align: center; place-content: center; }
+.nodes strong { color: var(--ink); font-family: var(--font-display), Georgia, serif; font-size: 1.15rem; }
+.nodes span { color: #655648; font-size: 0.78rem; }
+
+.storySection { padding-block: 96px; background: linear-gradient(115deg, #4b1817, #14181c 52%, #081820); }
+.storyGrid { display: grid; grid-template-columns: 0.82fr 1.18fr; align-items: center; gap: 74px; }
+.storyImage { position: relative; min-height: 560px; border: 1px solid var(--line); box-shadow: -16px 16px 0 rgba(231,214,181,0.07); }
+.storyImage img { object-fit: cover; }
+.storyGrid > div:last-child p { max-width: 74ch; }
+.storyGrid :global(.button) { margin-top: 16px; }
+
+/* Each character chapter remains grounded in a real store or street view. */
+.introSection {
+  background-image: linear-gradient(100deg, rgba(7,22,29,0.96), rgba(7,22,29,0.89)), url("/images/home/store-interior.webp");
+  background-position: center, center 44%;
+  background-size: cover;
+}
+.cardsSection {
+  background-image: linear-gradient(180deg, rgba(5,17,23,0.95), rgba(9,27,35,0.92)), url("/images/home/story-lane.webp");
+  background-position: center, center;
+  background-size: cover;
+}
+.relationshipSection {
+  background-image: linear-gradient(rgba(244,232,207,0.94), rgba(244,232,207,0.94)), url("/images/guides/read-order.webp");
+  background-position: center, center;
+  background-size: cover;
+}
+.storySection {
+  background-image: linear-gradient(115deg, rgba(75,24,23,0.94), rgba(20,24,28,0.91) 52%, rgba(8,24,32,0.94)), url("/images/home/story-lane.webp");
+  background-position: center, center;
+  background-size: cover;
+}
+
+@media (max-width: 1024px) {
+  .characterGrid { grid-template-columns: repeat(2, 1fr); }
+  .storekeeperCard { grid-column: auto; margin-top: 0; }
+  .storekeeperCard .imageWrap { aspect-ratio: 4 / 4.5; }
+  .storyGrid { gap: 48px; }
+}
+
+@media (max-width: 768px) {
+  .introSection, .cardsSection, .relationshipSection, .storySection { padding-block: 68px; }
+  .introGrid, .storyGrid { grid-template-columns: 1fr; gap: 36px; }
+  .characterGrid { grid-template-columns: 1fr; }
+  .imageWrap, .storekeeperCard .imageWrap { aspect-ratio: 4 / 3.9; }
+  .summary { min-height: auto; }
+  .headingRow { display: block; }
+  .headingRow > p { margin-top: 15px; }
+  .centerNode { width: 100%; }
+  .connection { display: none; }
+  .nodes { grid-template-columns: repeat(2, 1fr); margin-top: 14px; }
+  .storyImage { min-height: 380px; order: 2; }
+}

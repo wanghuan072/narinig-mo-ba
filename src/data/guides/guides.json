@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Walkthrough",
+    "href": "/walkthrough/",
+    "description": "Follow the full store routine and keep moving when a transaction or story beat seems stuck.",
+    "image": "/images/home/store-interior.webp"
+  },
+  {
+    "title": "Controls",
+    "href": "/guides/controls/",
+    "description": "Learn the mouse inputs used to pick up, check, return, and hand over products.",
+    "image": "/images/guides/check-price.webp"
+  },
+  {
+    "title": "Story, Clues & Ending",
+    "href": "/story/",
+    "description": "Follow the major clues, the final reveal, and the questions the game deliberately leaves open.",
+    "image": "/images/home/story-lane.webp"
+  },
+  {
+    "title": "Beginner Tips",
+    "href": "/guides/beginner-tips/",
+    "description": "Handle orders, prices, and change with a complete guide that also explains the story context.",
+    "image": "/images/guides/read-order.webp"
+  }
+]

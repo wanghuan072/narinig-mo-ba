@@ -1,0 +1,30 @@
+.hero { position: relative; min-height: 278px; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.09); }
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, rgba(5,17,23,0.98) 0%, rgba(5,17,23,0.86) 48%, rgba(5,17,23,0.35) 100%),
+    linear-gradient(0deg, var(--bg) 0%, transparent 58%),
+    url("/images/home/hero.webp");
+  background-position: center;
+  background-size: cover;
+  filter: saturate(0.84);
+}
+.content { position: relative; display: grid; min-height: 278px; grid-template-columns: minmax(0, 1.08fr) minmax(270px, 0.72fr); grid-template-rows: auto auto 1fr; column-gap: clamp(32px, 7vw, 100px); align-items: end; padding-block: 32px 34px; }
+.breadcrumbs { display: flex; grid-column: 1 / -1; gap: 9px; margin-bottom: 20px; color: var(--muted); font-size: 0.78rem; }
+.breadcrumbs a { text-decoration: underline; }
+.content :global(.eyebrow) { grid-column: 1; margin-bottom: 7px; }
+.content h1 { grid-column: 1; margin: 0; font-size: clamp(2.3rem, 3.55vw, 4.15rem); line-height: 1.02; }
+.description { grid-column: 2; grid-row: 2 / span 2; align-self: end; margin: 0 0 2px; padding-left: clamp(20px, 3vw, 40px); border-left: 1px solid rgba(255,210,122,0.42); color: rgba(245,234,214,0.88); font-size: clamp(0.98rem, 1.2vw, 1.08rem); line-height: 1.58; }
+.note { position: absolute; right: 24px; bottom: 34px; max-width: 180px; margin: 0; color: rgba(245,234,214,0.62); font-family: var(--font-display), Georgia, serif; font-style: italic; text-align: right; transform: rotate(-3deg); }
+
+@media (max-width: 768px) {
+  .hero, .content { min-height: 0; }
+  .backdrop { background-image: linear-gradient(90deg, rgba(5,17,23,0.97), rgba(5,17,23,0.7)), linear-gradient(0deg, var(--bg), transparent 60%), url("/images/home/hero.webp"); background-position: 66% center; }
+  .content { grid-template-columns: 1fr; gap: 13px; padding-block: 30px 32px; }
+  .breadcrumbs { grid-column: 1; margin-bottom: 9px; }
+  .content :global(.eyebrow), .content h1 { grid-column: 1; }
+  .content h1 { font-size: clamp(2rem, 9vw, 2.7rem); }
+  .description { grid-column: 1; grid-row: auto; padding: 13px 0 0; border-top: 1px solid rgba(255,210,122,0.32); border-left: 0; font-size: 1rem; }
+  .note { display: none; }
+}
