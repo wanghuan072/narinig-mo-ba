@@ -7,8 +7,8 @@ export const siteTdk = {
 
 export const pageTdk = {
   home: {
-    title: "Narinig Mo Ba Guide - Walkthrough, Story and Controls",
-    description: "Explore Narinig Mo Ba with player guides for controls, orders, prices, story clues, characters, and the ending, all arranged for an easier first shift.",
+    title: "Play Narinig Mo Ba Online - Story, Controls & Guides",
+    description: "Play Narinig Mo Ba online in your browser, then use practical help for orders, prices, controls, story clues, characters, and the ending when you need it.",
     path: "/",
     updated: "2026-09-11",
   },

@@ -94,14 +94,14 @@ export default function HomePage() {
           <div className={styles.gameCaption}>
             <div>
               <p className="eyebrow">A Filipino psychological horror game</p>
-              <h1>Narinig Mo Ba Guide — Controls, Clues, and Story Help</h1>
+              <h1>Play Narinig Mo Ba Online</h1>
               <p className={styles.captionCopy}>
-                Use this independent player guide when an order, price, or story detail leaves you stuck.
+                Start the browser game above. When an order, price, or story detail holds you up, the walkthrough and guides are ready below.
               </p>
             </div>
             <div className={styles.captionActions}>
-              <span>Guide artwork for Narinig Mo Ba</span>
-              <Link href="/walkthrough/">Need a hand? Start with the walkthrough <Icon name="arrow" size={17} /></Link>
+              <span>Play in your browser</span>
+              <Link href="/walkthrough/">Need help with an order? Read the walkthrough <Icon name="arrow" size={17} /></Link>
             </div>
           </div>
         </div>
