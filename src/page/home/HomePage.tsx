@@ -88,21 +88,21 @@ export default function HomePage() {
         />
         <div className={styles.heroShade} />
         <div className={`container ${styles.heroInner}`}>
-          <div id="play" className={styles.heroPlayer}>
-            <GamePlayer />
-          </div>
           <div className={styles.gameCaption}>
             <div>
               <p className="eyebrow">A Filipino psychological horror game</p>
               <h1>Play Narinig Mo Ba Online</h1>
               <p className={styles.captionCopy}>
-                Start the browser game above. When an order, price, or story detail holds you up, the walkthrough and guides are ready below.
+                Start the browser game below. When an order, price, or story detail holds you up, the walkthrough and guides are ready after your shift.
               </p>
             </div>
             <div className={styles.captionActions}>
               <span>Play in your browser</span>
               <Link href="/walkthrough/">Need help with an order? Read the walkthrough <Icon name="arrow" size={17} /></Link>
             </div>
+          </div>
+          <div id="play" className={styles.heroPlayer}>
+            <GamePlayer />
           </div>
         </div>
       </section>

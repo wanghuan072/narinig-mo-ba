@@ -11,18 +11,17 @@
     linear-gradient(180deg, rgba(4,14,19,0.95) 0%, rgba(4,14,19,0.68) 30%, rgba(4,14,19,0.96) 100%),
     linear-gradient(90deg, rgba(4,14,19,0.45), transparent 38%, rgba(4,14,19,0.42));
 }
-.heroInner { position: relative; padding-block: clamp(18px, 2.6vw, 36px) 22px; }
-.heroPlayer { position: relative; width: min(100%, 1040px); margin-inline: auto; }
+.heroInner { position: relative; padding-block: clamp(18px, 2.6vw, 36px) 28px; }
+.heroPlayer { position: relative; width: min(100%, 1040px); margin: 18px auto 0; }
 .heroPlayer :global(.shell) { border-radius: 8px 8px 0 0; box-shadow: 0 30px 90px rgba(0,0,0,0.62), 0 0 0 1px rgba(255,210,122,0.1); }
 .gameCaption {
   display: flex;
   align-items: end;
   justify-content: space-between;
   gap: 48px;
-  padding: clamp(24px, 3vw, 42px) clamp(6px, 2vw, 26px) 20px;
-  border-bottom: 1px solid rgba(255,210,122,0.28);
+  padding: 0 clamp(6px, 2vw, 26px);
 }
-.gameCaption h1 { margin: 2px 0 10px; color: #ffe4b0; font-size: clamp(2.25rem, 3.8vw, 4.15rem); line-height: 0.98; text-shadow: 0 4px 24px rgba(0,0,0,0.55); }
+.gameCaption h1 { margin: 2px 0 10px; color: #ffe4b0; font-size: clamp(1.9rem, 2.8vw, 3.1rem); line-height: 1; text-shadow: 0 4px 24px rgba(0,0,0,0.55); }
 .captionCopy { max-width: 650px; margin: 0; color: rgba(245,234,214,0.82); font-size: clamp(1rem, 1.3vw, 1.16rem); line-height: 1.55; }
 .captionActions { display: flex; min-width: 260px; flex-direction: column; align-items: flex-end; gap: 13px; padding-bottom: 4px; text-align: right; }
 .captionActions span { color: rgba(245,234,214,0.55); font-size: 0.69rem; letter-spacing: 0.05em; }
@@ -161,11 +160,11 @@
 @media (max-width: 768px) {
   .heroImage { object-position: 66% center; }
   .heroShade { background: linear-gradient(180deg, rgba(4,14,19,0.9), rgba(4,14,19,0.65) 36%, rgba(5,17,23,0.96)); }
-  .heroInner { padding-block: 14px 20px; }
-  .heroPlayer { width: 92%; }
+  .heroInner { padding-block: 18px 20px; }
+  .heroPlayer { width: 92%; margin-top: 14px; }
   .heroPlayer :global(.shell) { border-radius: 5px; box-shadow: 0 18px 50px rgba(0,0,0,0.55); }
-  .gameCaption { display: block; padding: 22px 4px 17px; }
-  .gameCaption h1 { font-size: clamp(2rem, 9vw, 2.8rem); }
+  .gameCaption { display: block; padding: 0 4px; }
+  .gameCaption h1 { font-size: clamp(1.75rem, 8vw, 2.4rem); }
   .captionCopy { font-size: 1rem; }
   .captionActions { min-width: 0; align-items: flex-start; margin-top: 18px; padding: 0; text-align: left; }
   .captionActions span { display: none; }
